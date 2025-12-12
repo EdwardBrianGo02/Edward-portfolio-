@@ -15,7 +15,6 @@ window.onload = function () {
     // Toggle skills section
     document.getElementById("toggleSkillsBtn").onclick = function () {
         let skills = document.getElementById("skillsSection");
-
         if (skills.style.display === "none") {
             skills.style.display = "block";
             this.textContent = "Hide Skills";
@@ -28,16 +27,16 @@ window.onload = function () {
     // Message box character counter
     let msg = document.getElementById("msgBox");
     let counter = document.getElementById("counter");
-
     msg.addEventListener("keyup", function () {
         let remaining = 200 - msg.value.length;
         counter.textContent = remaining;
     });
 
-
+    // Display current date
     document.getElementById("dateDisplay").textContent =
         new Date().toDateString();
 
+    // Quotes
     const quotes = [
         "Through Christ all things are possible - Philippians 4:13 ",
         "I can and I will.",
