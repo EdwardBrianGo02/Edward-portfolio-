@@ -1,9 +1,10 @@
 window.onload = function () {
-
-    document.getElementById("themeBtn").onclick = function() {
+    // Toggle dark mode
+    document.getElementById("themeBtn").onclick = function () {
         document.body.classList.toggle("dark-mode");
     };
 
+    // Edit job title
     document.getElementById("editJobBtn").onclick = function () {
         let newTitle = prompt("Enter new job title:");
         if (newTitle) {
@@ -11,6 +12,7 @@ window.onload = function () {
         }
     };
 
+    // Toggle skills section
     document.getElementById("toggleSkillsBtn").onclick = function () {
         let skills = document.getElementById("skillsSection");
 
@@ -23,6 +25,7 @@ window.onload = function () {
         }
     };
 
+    // Message box character counter
     let msg = document.getElementById("msgBox");
     let counter = document.getElementById("counter");
 
@@ -30,6 +33,7 @@ window.onload = function () {
         let remaining = 200 - msg.value.length;
         counter.textContent = remaining;
     });
+
 
     document.getElementById("dateDisplay").textContent =
         new Date().toDateString();
@@ -48,14 +52,16 @@ window.onload = function () {
     };
 };
 
+// Form validation
 function validateForm() {
     let name = document.getElementById("nameField").value;
     let email = document.getElementById("emailField").value;
 
-    if (name === "" || email === "") {
-        alert("Please fill out Name and Email before sending.");
+    if (!name || !email) {
+        alert("Please fill out all fields.");
         return false;
     }
+
     alert("Form sent successfully!");
     return true;
 }
