@@ -1,9 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header {
@@ -15,6 +14,10 @@ header a {
     text-decoration: none;
     color: black;
     margin: 0 5px;
+}
+header a:hover {
+    color: #007acc;
+    text-decoration: underline;
 }
 
 hr {
@@ -43,7 +46,7 @@ hr {
 
 h1 {
     font-size: 26px;
-    margin: 5px 0 5px 0;
+    margin: 5px 0;
 }
 span {
     font-style: italic;
@@ -91,6 +94,10 @@ form input[type="submit"] {
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+form input[type="submit"]:hover {
+    background: #555;
 }
 
 footer {
@@ -124,5 +131,19 @@ footer {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #555;
 }
 
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .profile-img {
+        margin: 0 auto 15px auto;
+    }
+}
